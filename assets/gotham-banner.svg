@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#030406"/>
+      <stop offset="0.55" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <radialGradient id="niebla" cx="0.5" cy="1" r="0.8">
+      <stop offset="0" stop-color="#FACC15" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FACC15" stop-opacity="0"/>
+    </radialGradient>
+    <path id="murcielago" d="M0,-5 L-2,-11 L-3.5,-6 C-8,-12 -18,-14 -30,-6 C-25,-3 -25,1 -27,5 C-22,1 -18,1 -16,5 C-13,1 -10,1 -7,6 C-5,2 -2,2 0,7 C2,2 5,2 7,6 C10,1 13,1 16,5 C18,1 22,1 27,5 C25,1 25,-3 30,-6 C18,-14 8,-12 3.5,-6 L2,-11 Z"/>
+    <filter id="brillo">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="380" fill="url(#cielo)"/>
+  <rect width="1200" height="380" fill="url(#niebla)"/>
+
+  <!-- estrellas -->
+  <g fill="#e5e7eb">
+    <circle cx="80" cy="40" r="1"/><circle cx="210" cy="70" r="1.2"/><circle cx="330" cy="30" r="0.9"/>
+    <circle cx="460" cy="55" r="1"/><circle cx="700" cy="25" r="1.1"/><circle cx="820" cy="60" r="0.8"/>
+    <circle cx="940" cy="35" r="1.2"/><circle cx="1110" cy="50" r="1"/><circle cx="1010" cy="95" r="0.8"/>
+    <circle cx="150" cy="120" r="0.8"/><circle cx="600" cy="90" r="0.9"/>
+    <animate attributeName="opacity" values="0.9;0.4;0.9" dur="4s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- luna creciente gris -->
+  <g transform="translate(1060,95)">
+    <circle r="34" fill="#d1d5db" opacity="0.85"/>
+    <circle cx="14" cy="-8" r="32" fill="#05070b"/>
+  </g>
+
+  <!-- relámpago -->
+  <rect width="1200" height="380" fill="#ffffff" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.18;0;0.12;0;0;0;0" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- edificios del fondo -->
+  <g fill="#0b0d12">
+    <rect x="0" y="250" width="70" height="130"/>
+    <rect x="60" y="215" width="55" height="165"/>
+    <rect x="110" y="265" width="80" height="115"/>
+    <rect x="180" y="200" width="45" height="180"/>
+    <rect x="220" y="240" width="70" height="140"/>
+    <rect x="860" y="230" width="60" height="150"/>
+    <rect x="915" y="205" width="50" height="175"/>
+    <rect x="960" y="250" width="90" height="130"/>
+    <rect x="1040" y="215" width="55" height="165"/>
+    <rect x="1090" y="245" width="110" height="135"/>
+  </g>
+  <!-- edificios del frente -->
+  <g fill="#000000">
+    <polygon points="0,300 40,300 40,280 90,280 90,380 0,380"/>
+    <polygon points="120,380 120,250 140,230 160,250 160,380"/>
+    <rect x="160" y="290" width="70" height="90"/>
+    <polygon points="245,380 245,215 265,190 285,215 285,380"/>
+    <rect x="285" y="275" width="60" height="105"/>
+    <rect x="345" y="300" width="40" height="80"/>
+    <rect x="815" y="290" width="45" height="90"/>
+    <polygon points="860,380 860,230 880,200 900,230 900,380"/>
+    <rect x="900" y="280" width="70" height="100"/>
+    <rect x="970" y="260" width="40" height="120"/>
+    <polygon points="1010,380 1010,240 1035,215 1060,240 1060,380"/>
+    <rect x="1060" y="300" width="80" height="80"/>
+    <rect x="1140" y="270" width="60" height="110"/>
+  </g>
+
+  <!-- ventanas encendidas -->
+  <g fill="#FACC15">
+    <rect x="128" y="265" width="5" height="7"/><rect x="146" y="290" width="5" height="7"/>
+    <rect x="253" y="230" width="5" height="7"/><rect x="270" y="260" width="5" height="7"/>
+    <rect x="300" y="290" width="5" height="7"/><rect x="175" y="305" width="5" height="7"/>
+    <rect x="870" y="250" width="5" height="7"/><rect x="886" y="300" width="5" height="7"/>
+    <rect x="915" y="295" width="5" height="7"/><rect x="1020" y="260" width="5" height="7"/>
+    <rect x="1043" y="300" width="5" height="7"/><rect x="1155" y="290" width="5" height="7"/>
+    <rect x="980" y="280" width="5" height="7"/>
+  </g>
+  <g fill="#FACC15">
+    <rect x="215" y="310" width="5" height="7"/><rect x="890" y="270" width="5" height="7"/><rect x="1175" y="320" width="5" height="7"/>
+    <animate attributeName="opacity" values="1;0;1;1;0.2;1" dur="5s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- lluvia -->
+  <g stroke="#9ca3af" stroke-width="1" opacity="0.25">
+    <line x1="100" y1="0" x2="90" y2="30"/><line x1="300" y1="20" x2="290" y2="50"/>
+    <line x1="520" y1="5" x2="510" y2="35"/><line x1="740" y1="15" x2="730" y2="45"/>
+    <line x1="960" y1="0" x2="950" y2="30"/><line x1="1150" y1="25" x2="1140" y2="55"/>
+    <line x1="410" y1="40" x2="400" y2="70"/><line x1="640" y1="50" x2="630" y2="80"/>
+    <animateTransform attributeName="transform" type="translate" values="0,-60;-40,380" dur="1.6s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- bandada fija junto a la luna -->
+  <g fill="#000000" stroke="#FACC15" stroke-width="0.7" stroke-opacity="0.6">
+    <use href="#murcielago" transform="translate(985,70) scale(1.1) rotate(-8)"/>
+    <use href="#murcielago" transform="translate(950,105) scale(0.8) rotate(6)"/>
+    <use href="#murcielago" transform="translate(1010,140) scale(0.7) rotate(-4)"/>
+    <use href="#murcielago" transform="translate(120,85) scale(1.0) rotate(10)"/>
+    <use href="#murcielago" transform="translate(165,60) scale(0.7) rotate(-6)"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- murcielagos volando -->
+  <g fill="#000000" stroke="#FACC15" stroke-width="0.6" stroke-opacity="0.5">
+    <use href="#murcielago" transform="translate(-60,120) scale(0.9)">
+      <animateTransform attributeName="transform" type="translate" values="-60,120;1260,60" dur="11s" repeatCount="indefinite" additive="replace"/>
+    </use>
+    <use href="#murcielago">
+      <animateTransform attributeName="transform" type="translate" values="-120,70;1280,130" dur="14s" begin="-4s" repeatCount="indefinite"/>
+    </use>
+    <use href="#murcielago">
+      <animateTransform attributeName="transform" type="translate" values="1280,40;-80,100" dur="16s" begin="-2s" repeatCount="indefinite"/>
+    </use>
+    <use href="#murcielago">
+      <animateTransform attributeName="transform" type="translate" values="-90,175;1290,145" dur="19s" begin="-9s" repeatCount="indefinite"/>
+    </use>
+    <use href="#murcielago">
+      <animateTransform attributeName="transform" type="translate" values="1290,160;-90,200" dur="13s" begin="-6s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- titulo -->
+  <g font-family="'Arial Black','Segoe UI',Impact,sans-serif" text-anchor="middle">
+    <text x="600" y="150" font-size="66" font-weight="900" fill="#FACC15" filter="url(#brillo)" letter-spacing="4">GOTHAM FILES</text>
+    <text x="600" y="198" font-size="24" font-weight="700" fill="#e5e7eb" letter-spacing="6">APE 6 · ARREGLOS Y LISTAS</text>
+    <text x="600" y="232" font-size="15" fill="#9ca3af" font-family="'Fira Code',Consolas,monospace" letter-spacing="2">declarar · recorrer · buscar · ordenar</text>
+  </g>
+  <rect x="450" y="244" width="300" height="2" fill="#FACC15" opacity="0.7"/>
+</svg>
